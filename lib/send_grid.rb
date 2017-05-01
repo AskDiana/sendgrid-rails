@@ -27,6 +27,10 @@ module SendGrid
     def open_tracking(enabled = true)
       add_filter_setting(:opentrack, :enabled, enabled ? 1 : 0) unless enabled.nil?
     end
+
+    def bypass_list_management(enabled = true)
+      add_filter_setting(:bypass_list_management, :enabled, enabled ? 1 : 0) unless enabled.nil?
+    end
   end
 
   class << self
